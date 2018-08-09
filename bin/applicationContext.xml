@@ -23,6 +23,10 @@
 			class="com.ngnteks.springdemo.CricketCoach">
 			<!-- setup setter injection -->
 			<property name="fortuneService" ref="myFortuneService"></property>
+			
+			<!-- inject literal/property values -->
+			<property name="emailAddress" value="n.baig90@gmail.com"></property>
+			<property name="teamName" value="PakistanCricket"></property>
 		
 		</bean>
 		
