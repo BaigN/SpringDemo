@@ -12,14 +12,19 @@
 	<context:component-scan base-package="com.ngnteks.springdemo" />
 	
 		<!-- define the dependency -->
-		<bean id="myfortune" class="com.ngnteks.springdemo.HappyFortuneService">
+		<bean id="myFortuneService" class="com.ngnteks.springdemo.HappyFortuneService">
 		
 		</bean>
 		<bean id="myCoach" class="com.ngnteks.springdemo.TrackCoach">
 		<!-- set up constructor injection -->
-		<constructor-arg ref="myfortune"></constructor-arg>
+		<constructor-arg ref="myFortuneService"></constructor-arg>
 		</bean>
+		<bean id="myCricketCoach"
+			class="com.ngnteks.springdemo.CricketCoach">
+			<!-- setup setter injection -->
+			<property name="fortuneService" ref="myFortuneService"></property>
 		
+		</bean>
 		
 	
 </beans>
